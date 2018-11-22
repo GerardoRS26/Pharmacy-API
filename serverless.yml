@@ -15,11 +15,12 @@ provider:
 functions:
   getProducts:
     handler: handler.getProducts
-     - http:
-         path: products/get
-         method: get
-         timeout: 30
-         private: true       
+    events:
+    - http:
+        path: products
+        method: get
+        timeout: 30
+      #  private: true       
 
 plugins:
   - serverless-offline
