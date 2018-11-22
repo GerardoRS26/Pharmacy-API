@@ -6,7 +6,7 @@ exports.getProducts = ` SELECT
                             p.name 'Nombre',
                             p.pricebuy as 'Precio de Compra',
                             p.pricesell as 'Precio de venta',
-                            SUM(s.units) as 'unidades'
+                            SUM(s.units) as 'Unidades'
                         FROM products p
                         INNER JOIN categories c ON c.id = p.category
                         INNER JOIN stockcurrent s  ON s.product = p.id
