@@ -6,6 +6,7 @@ provider:
   region: us-east-1
   stage: ${opt:stage, 'dev'}
   profile:  ${file(./config/config.${self:provider.stage}.js):awsProfile}
+  # Commentar en el primer deploy ya que no se tienen los valores
   # apiGateway:
   #   restApiId: ${file(./config/config.${self:provider.stage}.js):restApiId}
   #   restApiRootResourceId: ${file(./config/config.${self:provider.stage}.js):restApiRootResourceId}
@@ -20,7 +21,7 @@ functions:
         path: products
         method: get
         timeout: 30
-      #  private: true       
+        private: true       
 
 plugins:
   - serverless-offline
