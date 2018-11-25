@@ -8,8 +8,8 @@ provider:
   profile:  ${file(./config/config.${self:provider.stage}.js):awsProfile}
   # Commentar en el primer deploy ya que no se tienen los valores
   apiGateway:
-    restApiId: ${file(./config/config.${self:provider.stage}.js):restApiId}
-    restApiRootResourceId: ${file(./config/config.${self:provider.stage}.js):restApiRootResourceId}
+    # restApiId: ${file(./config/config.${self:provider.stage}.js):restApiId}
+    # restApiRootResourceId: ${file(./config/config.${self:provider.stage}.js):restApiRootResourceId}
   environment:
     database: ${file(./config/config.${self:provider.stage}.js):database}
 
