@@ -5,7 +5,8 @@ exports.getProducts = ` SELECT
                             p.reference as 'Referencia',
                             p.name 'Nombre',
                             p.pricebuy as 'Precio de Compra',
-                            p.pricesell as 'Precio de venta',
+                            p.pricesell as 'Precio de Venta',
+                            p.code as 'Codigo de Barras',
                             SUM(s.units) as 'Unidades'
                         FROM products p
                         INNER JOIN categories c ON c.id = p.category
