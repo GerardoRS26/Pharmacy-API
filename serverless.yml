@@ -21,7 +21,8 @@ functions:
         path: products
         method: get
         timeout: 30
-        private: true       
+        private: true
+        cors: true
 
 plugins:
   - serverless-offline
